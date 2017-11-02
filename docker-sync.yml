@@ -1,0 +1,13 @@
+version: '2'
+
+syncs:
+  src:
+    src: .
+    volumes:
+      - .:/app
+    sync_strategy: native_osx
+    sync_args: ["-prefer newer", "-copyonconflict"]
+    sync_excludes: &src_excludes
+      - ".git"
+      - "log"
+    watch_excludes: *src_excludes

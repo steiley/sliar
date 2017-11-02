@@ -1,0 +1,40 @@
+version: "2"
+
+services:
+
+  #
+  # メインコンテナ
+  #
+  web:
+    build:
+      context: .
+
+    volumes:
+      - .:/app
+    ports:
+      - "3500:3500"
+
+    links:
+      - mysql
+
+    command: puma -C config/puma.rb
+
+  #
+  # データコンテナ
+  #
+  data_mysql:
+    image: busybox
+    volumes:
+      - /opt/data/mysql/sliar:/var/lib/mysql
+
+  #
+  # MySQLのコンテナ
+  #
+  mysql:
+    image: percona:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - "./my.cnf:/etc/mysql/conf.d/chset.cnf"
+    volumes_from:
+      - data_mysql

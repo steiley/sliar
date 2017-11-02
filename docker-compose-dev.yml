@@ -1,0 +1,10 @@
+version: '2'
+
+volumes:
+  src:
+    external: true
+
+services:
+  web:
+    volumes:
+      - src:/app:rw
