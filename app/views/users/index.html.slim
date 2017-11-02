@@ -1,0 +1,31 @@
+p#notice
+  = notice
+.panel.panel-default
+  .panel-heading
+    |  Listing Users
+  .container
+    table.table
+      - if !@users.empty? ^
+        thead
+          tr
+            th
+              | Email
+            th
+              | Hobbies
+            th
+      tbody
+        - @users.each do |user|
+          tr
+            td
+              = user.email
+            td
+              = user.favorite_foods.map(&:emoji).join(' ')
+            td
+              - if can_update user
+                = link_to 'Edit', edit_user_path(user)
+            td
+              - if can_destroy user
+                = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+  br
+  - if can_create nil
+    = link_to 'New User', new_user_path
