@@ -1,0 +1,67 @@
+Layout/CommentIndentation:
+  Exclude:
+    - 'Gemfile'
+
+Layout/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
+
+Layout/ExtraSpacing:
+  Exclude:
+    - 'config/puma.rb'
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Layout/SpaceAfterComma:
+  Exclude:
+    - 'config/puma.rb'
+
+Layout/SpaceBeforeFirstArg:
+  Exclude:
+    - 'config/puma.rb'
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - config/initializers/devise.rb
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - db/schema.rb
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'config/spring.rb'
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/StderrPuts:
+  Exclude:
+    - 'bin/yarn'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
