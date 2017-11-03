@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :required_permission, only: %i[edit update]
+  before_action :required_permission, only: %i[edit update destroy]
 
   def index
+    @users = User.all
   end
 
   def edit
@@ -19,10 +20,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = current_user
+    @user.destroy
+    sign_out(:user)
+    redirect_to new_user_registration_path, notice: "You logged out."
+  end
+
   private
+
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation,
-       {:favorite_food_ids => []})
+                                 favorite_food_ids: [])
   end
 
   def required_permission
