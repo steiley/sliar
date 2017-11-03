@@ -26,12 +26,19 @@ RSpec.describe UsersController, type: :controller do
       user.password = user.password_confirmation = nil
       warden.set_user(user)
     end
-    let(:burger) { create(:food, emoji: "🍔")}
-    let(:sushi) { create(:food, emoji: "🍣")}
+    let(:burger) { create(:food, emoji: "🍔") }
+    let(:sushi) { create(:food, emoji: "🍣") }
 
     context "自分の更新の場合" do
       it "user#indexページへリダイレクトされ更新成功のメッセージが表示される" do
-        put :update, params: {id: 1, user: {email: "updated@sliar.com", password: "", food_ids: [burger.id, sushi.id]}}
+        put :update, params: {
+          id: 1,
+          user: {
+            email: "updated@sliar.com",
+            password: "",
+            food_ids: [burger.id, sushi.id]
+          }
+        }
 
         aggregate_failures do
           expect(response).to redirect_to(users_path)
@@ -44,7 +51,14 @@ RSpec.describe UsersController, type: :controller do
       let!(:other_user) { create(:user, id: 2) }
 
       it "user#indexページへリダイレクトされ、権限がないと表示される" do
-        put :update, params: {id: other_user.id, user: {email: "updated@sliar.com", password: "", food_ids: [burger.id, sushi.id]}}
+        put :update, params: {
+          id: other_user.id,
+          user: {
+            email: "updated@sliar.com",
+            password: "",
+            food_ids: [burger.id, sushi.id]
+          }
+        }
 
         aggregate_failures do
           expect(response).to redirect_to(users_path)

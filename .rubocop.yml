@@ -1,3 +1,23 @@
+Bundler/OrderedGems:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/BlockLength:
+  Exclude:
+    - db/schema.rb
+    - spec/**/*.rb
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - config/initializers/devise.rb
+    - db/schema.rb
+
+Metrics/MethodLength:
+  Max: 20
+
 Layout/CommentIndentation:
   Exclude:
     - 'Gemfile'
@@ -10,9 +30,6 @@ Layout/ExtraSpacing:
   Exclude:
     - 'config/puma.rb'
 
-Bundler/OrderedGems:
-  Enabled: false
-
 Layout/SpaceAfterComma:
   Exclude:
     - 'config/puma.rb'
@@ -21,21 +38,8 @@ Layout/SpaceBeforeFirstArg:
   Exclude:
     - 'config/puma.rb'
 
-Metrics/AbcSize:
-  Max: 30
-
-Metrics/BlockLength:
-  Exclude:
-    - db/schema.rb
-
-Metrics/LineLength:
-  Max: 120
-  Exclude:
-    - config/initializers/devise.rb
-    - db/schema.rb
-
-Metrics/MethodLength:
-  Max: 20
+Style/AsciiComments:
+  Enabled: false
 
 Style/BlockComments:
   Exclude:
