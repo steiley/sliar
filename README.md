@@ -1,24 +1,34 @@
-# README
+# 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これは以下の条件でつくられたRailsアプリケーションです
+- Ruby, Railsが最新(2017/11/2 現在)
+- ログイン認証がある
+- habtmを使っている
+- CRUDを使っている
 
-Things you may want to cover:
+# 環境構築
+Dockerが動く環境を想定
+## セットアップ
+```
+docker-compose build
+docker-compose run --rm web bin/setup
 
-* Ruby version
+```
+## 起動
+```
+docker-compose up -d
+```
 
-* System dependencies
+## 終了
+```
+docker-compose stop
+```
 
-* Configuration
+http://localhost:3500/
+でアクセスできます
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### MacOSで動作が重い場合以下でdocker-syncを使えば改善するかも
+```
+gem install docker-sync
+docker-sync start && docker-compose -f docker-compse-dev.yml -f docker-compose-dev.yml up -d
+```
