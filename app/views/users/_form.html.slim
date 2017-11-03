@@ -24,7 +24,7 @@
     .input-group
       span.input-group-addon
         = f.label :favorite_foods
-      = collection_check_boxes(:user, :favorite_food_ids, Hobby.all, :id, :name) do |h|
+      = collection_check_boxes(:user, :favorite_food_ids, Food.all, :id, :emoji) do |h|
         = h.label { h.check_box + h.text }
     .actions
       = f.submit
