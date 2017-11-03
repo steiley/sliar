@@ -5,7 +5,7 @@ p#notice
     |  Listing Users
   .container
     table.table
-      - if !@users.empty? ^
+      - if !@users.empty?
         thead
           tr
             th
@@ -21,11 +21,9 @@ p#notice
             td
               = user.favorite_foods.map(&:emoji).join(' ')
             td
-              - if can_update user
+              - if user.id == current_user.id
                 = link_to 'Edit', edit_user_path(user)
             td
-              - if can_destroy user
+              - if user.id == current_user.id
                 = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
   br
-  - if can_create nil
-    = link_to 'New User', new_user_path
