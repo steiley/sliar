@@ -9,6 +9,9 @@
 # 環境構築
 Dockerが動く環境を想定
 ## セットアップ
+MySQLは/opt/data/mysql/sliarのフォルダがあることが前提なっているので、作成して下さい。  
+MacOXでDockerのFile Sharingに/optが追加されていなければ追加して下さい。
+
 ```
 docker-compose build
 docker-compose run --rm web bin/setup
