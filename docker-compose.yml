@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
 
@@ -10,7 +10,7 @@ services:
       context: .
 
     volumes:
-      - .:/app
+      - .:/app:cached
     ports:
       - "3500:3500"
     environment:
@@ -22,14 +22,6 @@ services:
     command: puma -C config/puma.rb
 
   #
-  # データコンテナ
-  #
-  data_mysql:
-    image: busybox
-    volumes:
-      - /opt/data/mysql/sliar:/var/lib/mysql
-
-  #
   # MySQLのコンテナ
   #
   mysql:
@@ -37,6 +29,5 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
+      - ./data:/var/lib/mysql:cached
       - "./my.cnf:/etc/mysql/conf.d/chset.cnf"
-    volumes_from:
-      - data_mysql
