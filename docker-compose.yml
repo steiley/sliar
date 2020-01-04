@@ -19,7 +19,7 @@ services:
     links:
       - mysql
 
-    command: puma -C config/puma.rb
+    command: bundle exec puma -C config/puma.rb
 
   #
   # MySQLのコンテナ
