@@ -1,4 +1,4 @@
-FROM sickp/alpine-ruby:2.4.2
+FROM ruby:2.5.7-alpine
 
 ENV APP_ROOT /app
 
