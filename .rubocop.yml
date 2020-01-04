@@ -1,5 +1,6 @@
 require:
   - rubocop-performance
+  - rubocop-rails
 
 Bundler/OrderedGems:
   Enabled: false

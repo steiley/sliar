@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable
 
-  has_many :user_favorite_foods
+  has_many :user_favorite_foods, dependent: :destroy
   has_many :favorite_foods, through: :user_favorite_foods, source: :food
 
   # updateの時はパスワードは必須でなくて良い
