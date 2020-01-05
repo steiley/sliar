@@ -17,6 +17,7 @@ WORKDIR $APP_ROOT
 COPY . $APP_ROOT
 
 RUN echo 'gem: --no-document' >> ~/.gemrc && \
+    gem install bundler -v 2.1.3 && \
     bundle install
 
 CMD ["ash"]
