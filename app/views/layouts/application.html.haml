@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Sliar
+    = ::Temple::Utils.escape_html((javascript_include_tag 'application'))
+    = ::Temple::Utils.escape_html((csrf_meta_tags))
+  %body
+    - if user_signed_in?
+      = ::Temple::Utils.escape_html((link_to "Sign out", destroy_user_session_path, method: :delete))
+    = yield

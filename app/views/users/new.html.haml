@@ -1,0 +1,5 @@
+.panel.panel-default
+  .panel-heading
+    New User
+  = ::Temple::Utils.escape_html((render 'form'))
+  = ::Temple::Utils.escape_html((link_to 'Back', users_path))
