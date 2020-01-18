@@ -1,4 +1,4 @@
-FROM ruby:2.5.7-alpine
+FROM ruby:2.6.5-alpine
 
 ENV APP_ROOT /app
 
