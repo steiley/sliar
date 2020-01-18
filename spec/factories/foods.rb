@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :food do
-    emoji "MyString"
+    emoji { "MyString" }
   end
 end
