@@ -1,0 +1,32 @@
+.panel.panel-default
+  - _slim_controls1 = form_for(@user) do |f|
+  - if @user.errors.any?
+  #error_explanation
+    %h2
+      = ::Temple::Utils.escape_html((pluralize(@user.errors.count, "error")))
+      prohibited this user from being saved:
+    %ul
+      - @user.errors.full_messages.each do |message|
+        %li
+          = ::Temple::Utils.escape_html((message))
+  .input-group
+    %span.input-group-addon
+      = ::Temple::Utils.escape_html((f.label :email))
+    = ::Temple::Utils.escape_html((f.text_field :email, class: 'form-control'))
+  .input-group
+    %span.input-group-addon
+      = ::Temple::Utils.escape_html((f.label :password))
+    = ::Temple::Utils.escape_html((f.password_field :password, class: 'form-control'))
+  .input-group
+    %span.input-group-addon
+      = ::Temple::Utils.escape_html((f.label :password_confirmation))
+    = ::Temple::Utils.escape_html((f.password_field :password_confirmation, class: 'form-control'))
+  .input-group
+    %span.input-group-addon
+      = ::Temple::Utils.escape_html((f.label :favorite_foods))
+    - _slim_controls2 = collection_check_boxes(:user, :favorite_food_ids, Food.all, :id, :emoji) do |h|
+      = ::Temple::Utils.escape_html((h.label { h.check_box + h.text }))
+    = ::Temple::Utils.escape_html((_slim_controls2))
+  .actions
+    = ::Temple::Utils.escape_html((f.submit))
+  = ::Temple::Utils.escape_html((_slim_controls1))

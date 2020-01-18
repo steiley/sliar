@@ -1,0 +1,19 @@
+%h2
+  Log in
+- _slim_controls1 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .field
+    = ::Temple::Utils.escape_html((f.label :email))
+    %br/
+    = ::Temple::Utils.escape_html((f.email_field :email, autofocus: true))
+  .field
+    = ::Temple::Utils.escape_html((f.label :password))
+    %br/
+    = ::Temple::Utils.escape_html((f.password_field :password, autocomplete: "off"))
+  - if devise_mapping.rememberable?
+    .field
+      = ::Temple::Utils.escape_html((f.check_box :remember_me))
+      = ::Temple::Utils.escape_html((f.label :remember_me))
+  .actions
+    = ::Temple::Utils.escape_html((f.submit "Log in"))
+= ::Temple::Utils.escape_html((_slim_controls1))
+= ::Temple::Utils.escape_html((render "devise/shared/links"))

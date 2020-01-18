@@ -1,0 +1,9 @@
+%p#notice
+  = ::Temple::Utils.escape_html((notice))
+%p
+  %strong
+    Email:
+  = ::Temple::Utils.escape_html((@user.email))
+= ::Temple::Utils.escape_html((link_to 'Edit', edit_user_path(@user)))
+|
+= ::Temple::Utils.escape_html((link_to 'Back', users_path))
