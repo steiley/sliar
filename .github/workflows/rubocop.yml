@@ -15,7 +15,7 @@ jobs:
     - uses: clupprich/ruby-build-action@master
       id: rubocop
       with:
-        ruby-version: 2.6.5
+        ruby-version: 2.7.1
     - name: Install and execute Rubocop
       run: |
         gem i rubocop
