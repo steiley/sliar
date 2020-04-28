@@ -11,6 +11,7 @@ services:
 
     volumes:
       - .:/app:cached
+      - ./vendor/bundle:/usr/local/bundle:cached
     ports:
       - "3500:3500"
     environment:
