@@ -1,6 +1,6 @@
 module ControllerMacros
   def login_admin
-    before(:each) do
+    before do
       warden.set_user(build(:user))
     end
   end
