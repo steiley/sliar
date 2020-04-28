@@ -14,10 +14,7 @@ RUN apk add --update \
 
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
-COPY . $APP_ROOT
 
-RUN echo 'gem: --no-document' >> ~/.gemrc && \
-    gem install bundler -v 2.1.3 && \
-    bundle install
+RUN echo 'gem: --no-document' >> ~/.gemrc
 
 CMD ["ash"]
