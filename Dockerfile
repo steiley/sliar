@@ -18,3 +18,6 @@ WORKDIR $APP_ROOT
 RUN echo 'gem: --no-document' >> ~/.gemrc
 
 CMD ["ash"]
+
+COPY entrypoint.sh /usr/bin/
+ENTRYPOINT ["entrypoint.sh"]
