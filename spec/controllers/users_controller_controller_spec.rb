@@ -26,6 +26,7 @@ RSpec.describe UsersController, type: :controller do
       user.password = user.password_confirmation = nil
       warden.set_user(user)
     end
+
     let(:burger) { create(:food, emoji: "🍔") }
     let(:sushi) { create(:food, emoji: "🍣") }
 
