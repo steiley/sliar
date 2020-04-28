@@ -21,4 +21,5 @@ jobs:
         gem i rubocop
         gem i rubocop-performance
         gem i rubocop-rails
+        gem i rubocop-rspec
         rubocop
