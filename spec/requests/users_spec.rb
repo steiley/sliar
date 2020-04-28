@@ -28,6 +28,7 @@ describe 'Users', type: :request do
       user.password = user.password_confirmation = nil
       sign_in(user)
     end
+
     let(:burger) { create(:food, emoji: "🍔") }
     let(:sushi) { create(:food, emoji: "🍣") }
 
