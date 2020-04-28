@@ -310,6 +310,9 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
+    rubocop-rspec (3.6.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
     ruby-progressbar (1.13.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -388,6 +391,7 @@ DEPENDENCIES
   rubocop-factory_bot
   rubocop-performance
   rubocop-rails
+  rubocop-rspec
   sass-rails (>= 6.0.0)
   turbolinks
   tzinfo-data
