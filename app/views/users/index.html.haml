@@ -1,5 +1,5 @@
 %p#notice
-  = ::Temple::Utils.escape_html((notice))
+  = notice
 .panel.panel-default
   .panel-heading
     Listing Users
@@ -17,13 +17,13 @@
         - @users.each do |user|
           %tr
             %td
-              = ::Temple::Utils.escape_html((user.email))
+              = user.email
             %td
-              = ::Temple::Utils.escape_html((user.favorite_foods.map(&:emoji).join(' ')))
-            %td
-              - if user.id == current_user.id
-                = ::Temple::Utils.escape_html((link_to 'Edit', edit_user_path(user)))
+              = user.favorite_foods.map(&:emoji).join(' ')
             %td
               - if user.id == current_user.id
-                = ::Temple::Utils.escape_html((link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }))
+                = link_to 'Edit', edit_user_path(user)
+            %td
+              - if user.id == current_user.id
+                = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
   %br/
