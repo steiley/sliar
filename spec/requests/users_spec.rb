@@ -70,7 +70,7 @@ describe 'Users', type: :request do
     before { sign_in(create(:user, id: 1)) }
 
     it "successes" do
-      expect { delete "/users/1" }.to change { User.count }.by(-1)
+      expect { delete "/users/1" }.to change(User, :count).by(-1)
       expect(response).to redirect_to(new_user_registration_path)
     end
   end
