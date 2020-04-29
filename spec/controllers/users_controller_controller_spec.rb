@@ -26,6 +26,7 @@ RSpec.describe UsersController, type: :controller do
       user.password = user.password_confirmation = nil
       warden.set_user(user)
     end
+
     let(:burger) { create(:food, emoji: "🍔") }
     let(:sushi) { create(:food, emoji: "🍣") }
 
@@ -72,7 +73,7 @@ RSpec.describe UsersController, type: :controller do
     before { warden.set_user(create(:user, id: 1)) }
 
     it "sakujo" do
-      expect { delete :destroy, params: { id: 1 } }.to change { User.count }.by(-1)
+      expect { delete :destroy, params: { id: 1 } }.to change(User, :count).by(-1)
       expect(response).to redirect_to(new_user_registration_path)
     end
   end
