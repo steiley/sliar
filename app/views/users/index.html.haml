@@ -5,7 +5,7 @@
     Listing Users
   .container
     %table.table
-      - if !@users.empty?
+      - unless @users.empty?
         %thead
           %tr
             %th
@@ -21,9 +21,10 @@
             %td
               = user.favorite_foods.map(&:emoji).join(' ')
             %td
-              - if user.id == current_user.id
-                = link_to 'Edit', edit_user_path(user)
+              = link_to 'Edit', edit_user_path(user) if user.id == current_user.id
             %td
+              -# rubocop:disable Style/IfUnlessModifier
               - if user.id == current_user.id
                 = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+              -# rubocop:enable Style/IfUnlessModifier
   %br/

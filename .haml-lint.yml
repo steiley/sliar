@@ -1,0 +1,31 @@
+exclude:
+  - 'vendor/bundle/**/*'
+
+linters:
+
+  LineLength:
+    max: 120
+
+  RuboCop:
+    ignored_cops:
+      - Layout/EmptyLineAfterGuardClause
+      - Layout/SpaceInsideHashLiteralBraces
+      - Layout/TrailingBlankLines
+      - Lint/Void
+      - Metrics/BlockLength
+      - Layout/LineLength
+      - Style/TernaryParentheses
+      - Layout/TrailingEmptyLines
+      - Layout/LineLength
+
+  SpaceInsideHashAttributes:
+    enabled: false
+
+  ViewLength:
+    enabled: false
+
+  IdNames:
+    enabled: false
+
+  UnnecessaryStringOutput:
+    enabled: false
