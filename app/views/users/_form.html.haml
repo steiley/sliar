@@ -1,32 +1,30 @@
 .panel.panel-default
-  - _slim_controls1 = form_for(@user) do |f|
-  - if @user.errors.any?
+  - if user.errors.any?
   #error_explanation
     %h2
-      = pluralize(@user.errors.count, "error")
+      = pluralize(user.errors.count, "error")
       prohibited this user from being saved:
     %ul
-      - @user.errors.full_messages.each do |message|
+      - user.errors.full_messages.each do |message|
         %li
           = message
-  .input-group
-    %span.input-group-addon
-      = f.label :email
-    = f.text_field :email, class: 'form-control'
-  .input-group
-    %span.input-group-addon
-      = f.label :password
-    = f.password_field :password, class: 'form-control'
-  .input-group
-    %span.input-group-addon
-      = f.label :password_confirmation
-    = f.password_field :password_confirmation, class: 'form-control'
-  .input-group
-    %span.input-group-addon
-      = f.label :favorite_foods
-    - _slim_controls2 = collection_check_boxes(:user, :favorite_food_ids, Food.all, :id, :emoji) do |h|
-      = h.label { h.check_box + h.text }
-    = _slim_controls2
-  .actions
-    = f.submit
-  = _slim_controls1
+  = form_for(user) do |f|
+    .input-group
+      %span.input-group-addon
+        = f.label :email
+      = f.text_field :email, class: 'form-control'
+    .input-group
+      %span.input-group-addon
+        = f.label :password
+      = f.password_field :password, class: 'form-control'
+    .input-group
+      %span.input-group-addon
+        = f.label :password_confirmation
+      = f.password_field :password_confirmation, class: 'form-control'
+    .input-group
+      %span.input-group-addon
+        = f.label :favorite_foods
+        = h.label { h.check_box + h.text }
+        = collection_check_boxes(:user, :favorite_food_ids, Food.all, :id, :emoji) do |h|
+    .actions
+      = f.submit
