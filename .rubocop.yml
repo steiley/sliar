@@ -27,6 +27,9 @@ Layout/CommentIndentation:
   Exclude:
     - 'Gemfile'
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - 'db/schema.rb'
@@ -35,6 +38,9 @@ Layout/ExtraSpacing:
   Exclude:
     - 'config/puma.rb'
 
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
 Layout/SpaceAfterComma:
   Exclude:
     - 'config/puma.rb'
@@ -42,6 +48,15 @@ Layout/SpaceAfterComma:
 Layout/SpaceBeforeFirstArg:
   Exclude:
     - 'config/puma.rb'
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
 
 Style/AsciiComments:
   Enabled: false
@@ -52,6 +67,9 @@ Style/BlockComments:
 
 Style/Documentation:
   Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -68,9 +86,21 @@ Style/NumericLiterals:
   Exclude:
     - db/schema.rb
 
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
 Style/PercentLiteralDelimiters:
   Exclude:
     - 'config/spring.rb'
+
+Style/SlicingWithRange:
+  Enabled: true
 
 Style/SymbolArray:
   Enabled: false
