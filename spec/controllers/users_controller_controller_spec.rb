@@ -15,7 +15,7 @@ RSpec.describe UsersController, type: :controller do
       it "user#indexページが表示される" do
         get :index
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
   end
