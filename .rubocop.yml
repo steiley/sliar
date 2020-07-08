@@ -61,8 +61,14 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Style/AccessorGrouping:
+  Enabled: true
+
 Style/AsciiComments:
   Enabled: false
+
+Style/BisectedAttrAccessor:
+  Enabled: true
 
 Style/BlockComments:
   Exclude:
@@ -101,6 +107,9 @@ Style/HashTransformValues:
 Style/PercentLiteralDelimiters:
   Exclude:
     - 'config/spring.rb'
+
+Style/RedundantAssignment:
+  Enabled: true
 
 Style/RedundantFetchBlock:
   Enabled: true
