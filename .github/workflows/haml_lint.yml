@@ -28,6 +28,6 @@ jobs:
           eval "$(rbenv init -)"
           rbenv install -s `cat .ruby-version`
 
-      - uses: steiley/exec-ruby-diagnostic@master
+      - uses: steiley/exec-ruby-diagnostic@v1
         with:
           gem_name: haml_lint
