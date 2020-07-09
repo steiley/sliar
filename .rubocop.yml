@@ -61,8 +61,38 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Performance/AncestorsInclude:
+  Enabled: true
+
+Performance/BigDecimalWithNumericArgument:
+  Enabled: true
+
+Performance/RedundantSortBlock:
+  Enabled: true
+
+Performance/RedundantStringChars:
+  Enabled: true
+
+Performance/ReverseFirst:
+  Enabled: true
+
+Performance/SortReverse:
+  Enabled: true
+
+Performance/Squeeze:
+  Enabled: true
+
+Performance/StringInclude:
+  Enabled: true
+
+Style/AccessorGrouping:
+  Enabled: true
+
 Style/AsciiComments:
   Enabled: false
+
+Style/BisectedAttrAccessor:
+  Enabled: true
 
 Style/BlockComments:
   Exclude:
@@ -101,6 +131,9 @@ Style/HashTransformValues:
 Style/PercentLiteralDelimiters:
   Exclude:
     - 'config/spring.rb'
+
+Style/RedundantAssignment:
+  Enabled: true
 
 Style/RedundantFetchBlock:
   Enabled: true
