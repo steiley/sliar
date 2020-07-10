@@ -8,6 +8,8 @@ RUN apk add --update \
             musl-dev \
             g++ \
             pcre-dev \
+            libxml2-dev \
+            libxslt-dev \
             tzdata \
             nodejs \
             mariadb-dev
@@ -15,7 +17,8 @@ RUN apk add --update \
 RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
 
-RUN echo 'gem: --no-document' >> ~/.gemrc
+RUN echo 'gem: --no-document' >> ~/.gemrc && \
+    bundle config build.nokogiri --use-system-libraries
 
 CMD ["ash"]
 
