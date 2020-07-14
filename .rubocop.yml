@@ -49,6 +49,9 @@ Layout/SpaceBeforeFirstArg:
   Exclude:
     - 'config/puma.rb'
 
+Lint/DuplicateElsifCondition:
+  Enabled: true
+
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
@@ -91,7 +94,13 @@ Style/AccessorGrouping:
 Style/AsciiComments:
   Enabled: false
 
+Style/ArrayCoercion:
+  Enabled: true
+
 Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/CaseLikeIf:
   Enabled: true
 
 Style/BlockComments:
@@ -119,7 +128,13 @@ Style/NumericLiterals:
   Exclude:
     - db/schema.rb
 
+Style/HashAsLastArrayItem:
+  Enabled: true
+
 Style/HashEachMethods:
+  Enabled: true
+
+Style/HashLikeCase:
   Enabled: true
 
 Style/HashTransformKeys:
@@ -136,6 +151,9 @@ Style/RedundantAssignment:
   Enabled: true
 
 Style/RedundantFetchBlock:
+  Enabled: true
+
+Style/RedundantFileExtensionInRequire:
   Enabled: true
 
 Style/RedundantRegexpCharacterClass:
