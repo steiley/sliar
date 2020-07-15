@@ -1,0 +1,21 @@
+jobs:
+  ruby-common-setup:
+    name: Ruby common setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup rbenv
+        uses: masa-iwasaki/setup-rbenv@v1
+
+      - name: Cache RBENV_ROOT
+        uses: actions/cache@v1
+        id: cache_rbenv
+        with:
+          path: /home/runner/.rbenv
+          key: ubuntu-latest-rbenv-271
+          restore-keys: |
+            ubuntu-latest-rbenv-
+
+      - name: Install Ruby
+        run: |
+          eval "$(rbenv init -)"
+          rbenv install -s `cat .ruby-version`
