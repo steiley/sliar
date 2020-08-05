@@ -32,3 +32,5 @@ services:
     volumes:
       - ./data:/var/lib/mysql:cached
       - "./my.cnf:/etc/mysql/conf.d/chset.cnf"
+    ports:
+      - "3306:3306"
