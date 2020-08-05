@@ -50,7 +50,7 @@ RSpec.describe UsersController, type: :controller do
     context "他人の情報を更新しようとした場合" do
       let!(:other_user) { create(:user, id: 2) }
 
-      it "user#indexページへリダイレクトされ、権限がないと表示される" do
+      it 'returns 404' do
         put :update, params: {
           id: other_user.id,
           user: {
@@ -60,10 +60,7 @@ RSpec.describe UsersController, type: :controller do
           }
         }
 
-        aggregate_failures do
-          expect(response).to redirect_to(users_path)
-          expect(flash[:notice]).to eq "You don't have a permission!"
-        end
+        expect(response.status).to eq 404
       end
     end
   end
