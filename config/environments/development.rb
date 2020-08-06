@@ -51,7 +51,7 @@ Rails.application.configure do
     if ips.present?
       self_ip_address = ips.first.addr.ip_address
       gateway_ip_address = self_ip_address.sub(/\.\d+$/, '.1')
-      config.web_console.whitelisted_ips << gateway_ip_address
+      config.web_console.permissions = gateway_ip_address
       BetterErrors::Middleware.allow_ip! gateway_ip_address
     end
   end
