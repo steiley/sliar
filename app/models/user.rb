@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :user_favorite_foods, dependent: :destroy
   has_many :favorite_foods, through: :user_favorite_foods, source: :food
 
-  scope :me, ->(my_id, other_id) { where(id: my_id).find(id: other_id) }
+  scope :me, ->(my_id, other_id) { where(id: my_id).find(other_id) }
 
   # updateの時はパスワードは必須でなくて良い
   before_validation do |record|
