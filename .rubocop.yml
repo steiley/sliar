@@ -49,19 +49,46 @@ Layout/SpaceBeforeFirstArg:
   Exclude:
     - 'config/puma.rb'
 
+Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: true
+
 Lint/DuplicateElsifCondition:
   Enabled: true
 
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
+Lint/DuplicateRescueException:
+  Enabled: true
+
+Lint/EmptyConditionalBody:
+  Enabled: true
+
+Lint/FloatComparison:
+  Enabled: true
+
+Lint/MissingSuper:
+  Enabled: true
+
 Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+Lint/OutOfRangeRegexpRef:
   Enabled: true
 
 Lint/RaiseException:
   Enabled: true
 
+Lint/SelfAssignment:
+  Enabled: true
+
 Lint/StructNewOverride:
+  Enabled: true
+
+Lint/TopLevelReturnWithArgument:
+  Enabled: true
+
+Lint/UnreachableLoop:
   Enabled: true
 
 Performance/AncestorsInclude:
@@ -139,6 +166,9 @@ Style/ArrayCoercion:
 Style/BisectedAttrAccessor:
   Enabled: true
 
+Style/OptionalBooleanParameter:
+  Enabled: true
+
 Style/CaseLikeIf:
   Enabled: true
 
@@ -149,12 +179,18 @@ Style/BlockComments:
 Style/Documentation:
   Enabled: false
 
+Style/ExplicitBlockArgument:
+  Enabled: true
+
 Style/ExponentialNotation:
   Enabled: true
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/GlobalStdStream:
+  Enabled: true
+  
 Style/MixinUsage:
   Exclude:
     - 'bin/setup'
@@ -201,6 +237,9 @@ Style/RedundantRegexpCharacterClass:
 Style/RedundantRegexpEscape:
   Enabled: true
 
+Style/SingleArgumentDig:
+  Enabled: true
+
 Style/SlicingWithRange:
   Enabled: true
 
@@ -210,6 +249,9 @@ Style/SymbolArray:
 Style/StderrPuts:
   Exclude:
     - 'bin/yarn'
+
+Style/StringConcatenation:
+  Enabled: true
 
 Style/StringLiterals:
   Enabled: false
