@@ -68,7 +68,7 @@ RSpec.describe UsersController, type: :controller do
   describe "delete destroy" do
     before { warden.set_user(create(:user, id: 1)) }
 
-    it "sakujo" do
+    it "successes" do
       expect { delete :destroy, params: { id: 1 } }.to change { User.count }.by(-1)
       expect(response).to redirect_to(new_user_registration_path)
     end
