@@ -1,10 +1,13 @@
 name: RSpec
 
-on: [push]
+on:
+  pull_request:
+    branches:
+    - master
 
 jobs:
 
-  build:
+  execute:
     runs-on: ubuntu-latest
 
     services:

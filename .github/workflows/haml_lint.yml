@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  build:
+  execute:
 
     runs-on: ubuntu-latest
 
