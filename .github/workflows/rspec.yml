@@ -1,0 +1,36 @@
+name: RSpec
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+
+    container:
+      image: circleci/ruby:2.7.1-buster-node-browsers
+      options: --user root
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Build and setup
+      run: |
+        cp config/database.yml.sample config/database.yml
+        gem install bundler --no-document -v $(grep "BUNDLED WITH" -1 Gemfile.lock | tail -n 1)
+        bundle config build.nokogiri --use-system-libraries
+        bundle install --jobs 4 --retry 3
+
+    - name: Database setup
+      run: |
+        bundle exec rails db:create
+        bundle exec rails db:schema:load --trace
+
+    - name: Exec rspec
+      run: bundle exec rspec
