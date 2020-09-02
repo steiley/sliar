@@ -1,5 +1,9 @@
 {
   "name": "sliar",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "stylelint": "^13.7.0",
+    "stylelint-config-sass-recommended": "^1.0.0"
+  }
 }
