@@ -58,10 +58,16 @@ Lint/DuplicateElsifCondition:
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
 
+Lint/DuplicateRequire:
+  Enabled: true
+
 Lint/DuplicateRescueException:
   Enabled: true
 
 Lint/EmptyConditionalBody:
+  Enabled: true
+
+Lint/EmptyFile:
   Enabled: true
 
 Lint/FloatComparison:
@@ -88,7 +94,13 @@ Lint/StructNewOverride:
 Lint/TopLevelReturnWithArgument:
   Enabled: true
 
+Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: true
+
 Lint/UnreachableLoop:
+  Enabled: true
+
+Lint/UselessMethodDefinition:
   Enabled: true
 
 Performance/AncestorsInclude:
@@ -169,12 +181,18 @@ Style/BisectedAttrAccessor:
 Style/OptionalBooleanParameter:
   Enabled: true
 
-Style/CaseLikeIf:
-  Enabled: true
-
 Style/BlockComments:
   Exclude:
     - 'spec/spec_helper.rb'
+
+Style/CaseLikeIf:
+  Enabled: true
+
+Style/CombinableLoops:
+  Enabled: true
+
+Style/CommentedKeyword:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
@@ -190,7 +208,10 @@ Style/FrozenStringLiteralComment:
 
 Style/GlobalStdStream:
   Enabled: true
-  
+
+Style/KeywordParametersOrder:
+  Enabled: true
+
 Style/MixinUsage:
   Exclude:
     - 'bin/setup'
@@ -218,6 +239,9 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: true
 
+Style/Lambda:
+  Enabled: false
+
 Style/PercentLiteralDelimiters:
   Exclude:
     - 'config/spring.rb'
@@ -237,10 +261,16 @@ Style/RedundantRegexpCharacterClass:
 Style/RedundantRegexpEscape:
   Enabled: true
 
+Style/RedundantSelfAssignment:
+  Enabled: true
+
 Style/SingleArgumentDig:
   Enabled: true
 
 Style/SlicingWithRange:
+  Enabled: true
+
+Style/SoleNestedConditional:
   Enabled: true
 
 Style/SymbolArray:
