@@ -1,0 +1,18 @@
+name: stylelint
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  execute:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2.3.2
+      - uses: steiley/exec-javascript-diagnostic@master
+        with:
+          package_name: stylelint
+          target_path: "app/assets/**/*.sass"
