@@ -1,4 +1,5 @@
 ActiveSupport.on_load :active_record do
+  # rubocop:disable Lint/ConstantDefinitionInBlock
   module CreateTableWithRowFormat
     def create_table(table_name, options = {})
       table_options = options.merge(options: 'ENGINE=InnoDB ROW_FORMAT=DYNAMIC')
@@ -7,5 +8,6 @@ ActiveSupport.on_load :active_record do
       end
     end
   end
+  # rubocop:enable Lint/ConstantDefinitionInBlock
   ActiveRecord::ConnectionAdapters::AbstractMysqlAdapter.prepend CreateTableWithRowFormat
 end
