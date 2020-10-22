@@ -12,6 +12,7 @@ RUN apk add --update \
             libxslt-dev \
             tzdata \
             nodejs \
+            npm \
             mariadb-dev
 
 RUN mkdir $APP_ROOT
