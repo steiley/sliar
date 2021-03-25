@@ -13,6 +13,19 @@ updates:
   - "dependencies"
   - "ruby"
   - "automerge"
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  labels:
+  - "dependencies"
+  - "ruby"
+  - "automerge"
 - package-ecosystem: docker
   directory: "/"
   schedule:
