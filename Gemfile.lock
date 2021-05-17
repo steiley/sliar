@@ -255,7 +255,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sexp_processor (4.15.2)
+    sexp_processor (4.15.3)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
