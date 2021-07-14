@@ -24,7 +24,7 @@ updates:
   - dependency-type: indirect
   labels:
   - "dependencies"
-  - "ruby"
+  - "javascript"
   - "automerge"
 - package-ecosystem: docker
   directory: "/"
