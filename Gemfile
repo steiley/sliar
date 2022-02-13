@@ -6,11 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
+gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
 # Use MySQL as the database for Active Record
 gem 'mysql2'
 # Use Puma as the app server
-gem 'puma', '>= 5.5.1'
+gem 'puma', '>= 5.6.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,7 +30,7 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.7.3'
+gem 'devise', '>= 4.8.0'
 gem 'haml-rails', '>= 2.0.1'
 gem 'warden'
 
