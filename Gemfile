@@ -30,7 +30,7 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.7.3'
+gem 'devise', '>= 4.8.0'
 gem 'haml-rails', '>= 2.0.1'
 gem 'warden'
 
