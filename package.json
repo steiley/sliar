@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "stylelint": "^14.2.0",
+    "stylelint": "^14.14.0",
     "stylelint-config-sass-recommended": "^1.0.0"
   }
 }
