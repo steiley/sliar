@@ -1,4 +1,4 @@
-FROM ruby:3.0.3-alpine
+FROM ruby:3.1.7-alpine
 
 ENV APP_ROOT /app
 
@@ -10,6 +10,7 @@ RUN apk add --update \
             pcre-dev \
             libxml2-dev \
             libxslt-dev \
+            yaml-dev \
             tzdata \
             nodejs \
             npm \
