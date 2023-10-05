@@ -39,14 +39,14 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec'
-  gem 'rspec-rails', '>= 5.0.2'
+  gem 'rspec-rails', '>= 6.0.0'
   gem 'factory_bot'
   gem 'factory_bot_rails', '>= 6.3.0'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console', '>= 4.2.0'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
