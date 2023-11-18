@@ -117,14 +117,15 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    digest (3.1.0)
     drb (2.2.1)
     erubi (1.13.1)
     erubis (2.7.0)
     execjs (2.8.1)
-    factory_bot (6.2.1)
+    factory_bot (6.4.0)
       activesupport (>= 5.0.0)
-    factory_bot_rails (6.2.0)
-      factory_bot (~> 6.2.0)
+    factory_bot_rails (6.4.0)
+      factory_bot (~> 6.4)
       railties (>= 5.0.0)
     ffi (1.15.5)
     globalid (1.2.1)
@@ -364,7 +365,7 @@ DEPENDENCIES
   coffee-rails (>= 5.0.0)
   devise
   factory_bot
-  factory_bot_rails (>= 6.2.0)
+  factory_bot_rails (>= 6.3.0)
   haml-rails (>= 2.0.1)
   haml_lint
   jbuilder
