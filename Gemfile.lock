@@ -201,7 +201,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    puma (5.6.4)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (2.2.14)
@@ -370,7 +370,7 @@ DEPENDENCIES
   jbuilder
   mry
   mysql2
-  puma (>= 5.6.4)
+  puma (>= 5.6.8)
   rails (~> 7.1.5.1)
   rails_best_practices
   rspec
