@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.3'
+gem 'rails', '~> 7.0.8', '>= 7.0.8.3'
 # Use MySQL as the database for Active Record
 gem 'mysql2'
 # Use Puma as the app server
