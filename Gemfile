@@ -49,13 +49,13 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
-  gem 'haml_lint', require: false
+  gem 'haml_lint', '>= 0.40.1', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'mry', require: false
   gem 'rails_best_practices', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop', '>= 1.31.0', require: false
+  gem 'rubocop-performance', '>= 1.14.0', require: false
+  gem 'rubocop-rails', '>= 2.15.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
