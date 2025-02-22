@@ -31,7 +31,7 @@ gem 'bcrypt'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', '>= 4.7.3'
-gem 'haml-rails', '>= 2.0.1'
+gem 'haml-rails', '>= 2.1.0'
 gem 'warden'
 
 group :development, :test do
@@ -54,8 +54,8 @@ group :development do
   gem 'mry', require: false
   gem 'rails_best_practices', require: false
   gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
+  gem 'rubocop-performance', '>= 1.24.0', require: false
+  gem 'rubocop-rails', '>= 2.30.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
