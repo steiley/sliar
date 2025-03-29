@@ -31,7 +31,7 @@ gem 'bcrypt'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', '>= 4.7.3'
-gem 'haml-rails', '>= 2.0.1'
+gem 'haml-rails', '>= 2.1.0'
 gem 'warden'
 
 group :development, :test do
