@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'Users', type: :request do
   describe "GET index" do
     subject { get '/users' }
+
     context "ログインしていない場合" do
       it "session/newにリダイレクトされる" do
         subject
