@@ -1,19 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
-  describe "get index" do
+describe 'Users', type: :request do
+  describe "GET index" do
+    subject { get '/users' }
     context "ログインしていない場合" do
       it "session/newにリダイレクトされる" do
-        get :index
+        subject
+
         expect(response).to redirect_to(new_user_session_path)
       end
     end
 
     context "ログインしている場合" do
-      before { warden.set_user(build(:user, id: 1)) }
+      before { sign_in(build(:user, id: 1)) }
 
       it "user#indexページが表示される" do
-        get :index
+        subject
 
         expect(response).to be_successful
       end
@@ -24,19 +26,18 @@ RSpec.describe UsersController, type: :controller do
     before do
       user = create(:user, id: 1)
       user.password = user.password_confirmation = nil
-      warden.set_user(user)
+      sign_in(user)
     end
     let(:burger) { create(:food, emoji: "🍔") }
     let(:sushi) { create(:food, emoji: "🍣") }
 
     context "自分の更新の場合" do
       it "user#indexページへリダイレクトされ更新成功のメッセージが表示される" do
-        put :update, params: {
-          id: 1,
+        patch "/users/1", params: {
           user: {
             email: "updated@sliar.com",
             password: "",
-            food_ids: [burger.id, sushi.id]
+            favorite_food_ids: [burger.id, sushi.id]
           }
         }
 
@@ -51,12 +52,11 @@ RSpec.describe UsersController, type: :controller do
       let!(:other_user) { create(:user, id: 2) }
 
       it 'returns 404' do
-        put :update, params: {
-          id: other_user.id,
+        patch "/users/#{other_user.id}", params: {
           user: {
             email: "updated@sliar.com",
             password: "",
-            food_ids: [burger.id, sushi.id]
+            favorite_food_ids: [burger.id, sushi.id]
           }
         }
 
@@ -66,10 +66,10 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "delete destroy" do
-    before { warden.set_user(create(:user, id: 1)) }
+    before { sign_in(create(:user, id: 1)) }
 
     it "successes" do
-      expect { delete :destroy, params: { id: 1 } }.to change { User.count }.by(-1)
+      expect { delete "/users/1" }.to change { User.count }.by(-1)
       expect(response).to redirect_to(new_user_registration_path)
     end
   end

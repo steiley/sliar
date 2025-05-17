@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     @user = find_user
 
     if @user.update(user_params)
+      # rubocop:disable Rails/I18nLocaleTexts
       redirect_to users_path, notice: 'User was successfully updated.'
+      # rubocop:enable Rails/I18nLocaleTexts
     else
       render :edit
     end
@@ -23,7 +25,9 @@ class UsersController < ApplicationController
     @user = find_user
     @user.destroy
     sign_out(:user)
-    redirect_to new_user_registration_path, notice: "You logged out."
+    # rubocop:disable Rails/I18nLocaleTexts
+    redirect_to new_user_registration_path, notice: 'You logged out.'
+    # rubocop:enable Rails/I18nLocaleTexts
   end
 
   private
