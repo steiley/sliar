@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.3'
+gem 'rails', '~> 7.1.5.1'
 # Use MySQL as the database for Active Record
 gem 'mysql2'
 # Use Puma as the app server
@@ -30,9 +30,10 @@ gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', '>= 4.7.3'
+gem 'devise'
 gem 'haml-rails', '>= 2.0.1'
 gem 'warden'
+gem 'bootsnap', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
