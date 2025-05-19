@@ -174,7 +174,7 @@ GEM
     msgpack (1.8.0)
     mutex_m (0.3.0)
     mysql2 (0.5.4)
-    net-imap (0.4.22)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
