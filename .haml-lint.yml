@@ -11,7 +11,6 @@ linters:
     ignored_cops:
       - Layout/EmptyLineAfterGuardClause
       - Layout/SpaceInsideHashLiteralBraces
-      - Layout/TrailingBlankLines
       - Lint/Void
       - Metrics/BlockLength
       - Layout/LineLength
