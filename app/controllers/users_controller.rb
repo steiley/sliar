@@ -33,8 +33,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation,
-                                 favorite_food_ids: [])
+    params.expect(user: [:email, :password, :password_confirmation,
+                         { favorite_food_ids: [] }])
   end
 
   def find_user
