@@ -5,11 +5,11 @@ services:
   #
   web:
     build: .
-    image: sliar-web:3.3.8
+    image: sliar-web:3.4.4
 
     volumes:
       - .:/app:cached
-      - ./vendor/bundle/3.3:/usr/local/bundle:cached
+      - ./vendor/bundle/3.4:/usr/local/bundle:cached
     ports:
       - "3500:3500"
     environment:
