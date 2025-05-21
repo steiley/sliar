@@ -117,7 +117,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.6.2)
-    drb (2.2.1)
+    drb (2.2.3)
     erb (5.0.1)
     erubi (1.13.1)
     erubis (2.7.0)
