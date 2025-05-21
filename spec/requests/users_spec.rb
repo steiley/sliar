@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'Users', type: :request do
   describe "GET index" do
     subject { get '/users' }
+
     context "ログインしていない場合" do
       it "session/newにリダイレクトされる" do
         subject
@@ -28,6 +29,7 @@ describe 'Users', type: :request do
       user.password = user.password_confirmation = nil
       sign_in(user)
     end
+
     let(:burger) { create(:food, emoji: "🍔") }
     let(:sushi) { create(:food, emoji: "🍣") }
 
@@ -69,7 +71,7 @@ describe 'Users', type: :request do
     before { sign_in(create(:user, id: 1)) }
 
     it "successes" do
-      expect { delete "/users/1" }.to change { User.count }.by(-1)
+      expect { delete "/users/1" }.to change(User, :count).by(-1)
       expect(response).to redirect_to(new_user_registration_path)
     end
   end

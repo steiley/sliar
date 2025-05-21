@@ -2,6 +2,7 @@ plugins:
   - rubocop-performance
   - rubocop-rails
   - rubocop-factory_bot
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
@@ -184,6 +185,18 @@ Rails/WhereExists:
 
 Rails/WhereNot:
   Enabled: true
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/NamedSubject:
+  Enabled: false
 
 Style/AccessorGrouping:
   Enabled: true
