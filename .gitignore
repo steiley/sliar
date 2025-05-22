@@ -46,3 +46,9 @@ bower.json
 .byebug_history
 
 config/database\.yml
+
+/config/master.key
+
+/config/credentials/test.key
+
+/config/credentials/development.key
