@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Users', type: :request do
+describe 'Users' do
   describe "GET index" do
     subject { get '/users' }
 
@@ -62,7 +62,7 @@ describe 'Users', type: :request do
           }
         }
 
-        expect(response.status).to eq 404
+        expect(response).to have_http_status :not_found
       end
     end
   end
