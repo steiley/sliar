@@ -1,21 +1,14 @@
 # 概要
 
-これは以下の条件でつくられたRailsアプリケーションです
-- Ruby, Railsが最新(2017/11/2 現在)
-- ログイン認証がある
-- habtmを使っている
-- CRUDを使っている
+これは主にGitHub Actionsの動作確認に使っているRailsアプリケーションです。  
+また、Ruby,Railsのバージョンアップの知見の蓄積も兼ねてRuby,Railsは最新となるよう更新しています。
 
 # 環境構築
 Dockerが動く環境を想定
+
 ## セットアップ
-MySQLは/opt/data/mysql/sliarのフォルダがあることが前提なっているので、作成して下さい。  
-MacOXでDockerのFile Sharingに/optが追加されていなければ追加して下さい。
-
 ```
-docker-compose build
 docker-compose run --rm web bin/setup
-
 ```
 ## 起動
 ```
@@ -29,9 +22,3 @@ docker-compose stop
 
 http://localhost:3500/
 でアクセスできます
-
-### MacOSで動作が重い場合以下でdocker-syncを使えば改善するかも
-```
-gem install docker-sync
-docker-sync start && docker-compose -f docker-compse-dev.yml -f docker-compose-dev.yml up -d
-```
