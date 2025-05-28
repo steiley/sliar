@@ -19,8 +19,6 @@ jobs:
     container:
       image: cimg/ruby:3.4.4-node
       options: --user root
-      env:
-        RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
 
     steps:
     - uses: actions/checkout@master
@@ -33,9 +31,13 @@ jobs:
         bundle install --jobs 4 --retry 3
 
     - name: Database setup
+      env:
+        RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
         bundle exec rails db:create RAILS_ENV=test
         bundle exec rails db:schema:load --trace RAILS_ENV=test
 
     - name: Exec rspec
+      env:
+        RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: bundle exec rspec
