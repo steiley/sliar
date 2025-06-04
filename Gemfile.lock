@@ -89,7 +89,6 @@ GEM
     brakeman (7.0.2)
       racc
     builder (3.3.0)
-    byebug (12.0.0)
     code_analyzer (0.5.5)
       sexp_processor
     coffee-rails (5.0.0)
@@ -103,6 +102,9 @@ GEM
     connection_pool (2.5.3)
     crass (1.0.6)
     date (3.4.1)
+    debug (1.10.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     debug_inspector (1.2.0)
     devise (4.9.4)
       bcrypt (~> 3.0)
@@ -371,8 +373,8 @@ DEPENDENCIES
   binding_of_caller
   bootsnap
   brakeman
-  byebug
   coffee-rails (>= 5.0.0)
+  debug
   devise
   factory_bot
   factory_bot_rails (>= 6.3.0)
