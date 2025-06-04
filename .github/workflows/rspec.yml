@@ -32,6 +32,7 @@ jobs:
 
     - name: Database setup
       env:
+        SECRETS: ${{ secrets }}
         RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
       run: |
         bundle exec rails db:create RAILS_ENV=test
