@@ -8,7 +8,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 8.0.2'
 # Use MySQL as the database for Active Record
-gem 'mysql2'
+gem 'trilogy'
 # Use Puma as the app server
 gem 'puma', '>= 5.6.9'
 # Use SCSS for stylesheets
