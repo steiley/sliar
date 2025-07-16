@@ -17,7 +17,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
 
     container:
-      image: cimg/ruby:3.4.4-node
+      image: cimg/ruby:3.4.5-node
       options: --user root
 
     steps:
