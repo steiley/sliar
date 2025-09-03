@@ -5,7 +5,7 @@ services:
   #
   web:
     build: .
-    image: sliar-web:3.4.4
+    image: sliar-web:3.4.5
 
     volumes:
       - .:/app:cached
