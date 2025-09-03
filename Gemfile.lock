@@ -323,7 +323,7 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    sexp_processor (4.17.3)
+    sexp_processor (4.17.4)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
