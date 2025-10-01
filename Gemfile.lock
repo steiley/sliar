@@ -170,7 +170,7 @@ GEM
     mry (0.78.0.0)
       rubocop (>= 0.41.0)
     msgpack (1.8.0)
-    net-imap (0.5.10)
+    net-imap (0.5.11)
       date
       net-protocol
     net-pop (0.1.2)
